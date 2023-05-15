@@ -1,0 +1,49 @@
+<nav class='nav' slot='header'>
+	<div class='logo'>
+		<h2>The Gym Oasis</h2>
+	</div>
+	<ul class='nav_wrapper'>
+		<li class='nav_link'>
+			<a href='about'>about</a>
+		</li>
+		<li class='nav_link'>
+			<a href='products'>products</a>
+		</li>
+		<li class='nav_link'>
+			<a href='blog'>blog</a>
+		</li>
+		<li class='nav_link'>
+			<a href='contact'>contact</a>
+		</li>
+	</ul>
+</nav>
+<style>
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 0.25rem;
+		background-color: #d2f5ff;
+		border: 1px solid #d2f5ff;
+		border-radius: 5px;
+	}
+	.logo {
+		font-size: 1.2rem;
+	}
+	.logo > h2 {
+		text-align: center;
+	}
+	.nav_wrapper {
+		display: flex;
+		gap: 1rem;
+	}
+	.nav_link {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: rgb(var(--accent));
+		font-weight: 700;
+	}
+</style>
