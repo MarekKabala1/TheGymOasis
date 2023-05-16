@@ -22,13 +22,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0 0.25rem;
-		background-color: #d2f5ff;
+		padding: 0 clamp(0.5rem, 3vw, 2rem);
+		background-color: var(--neutral-gray);
 		border: 1px solid #d2f5ff;
 		border-radius: 5px;
+		margin-bottom: 5rem;
 	}
 	.logo {
-		font-size: 1.2rem;
+		font-size: clamp(0.8rem, 2.5vw, 2rem);
+		color: var(--primary);
 	}
 	.logo > h2 {
 		text-align: center;
@@ -45,5 +47,14 @@
 		text-transform: capitalize;
 		color: rgb(var(--accent));
 		font-weight: 700;
+		font-size: clamp(0.5rem, 2.5vw, 1.2rem);
+		color: var(--primary);
+	}
+	a:is(:hover, :focus-within) {
+		background-position: 0 10rem;
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		border-bottom: 2px solid var(--accent-gradient);
 	}
 </style>
