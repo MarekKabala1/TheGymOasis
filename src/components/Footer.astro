@@ -1,9 +1,81 @@
-<footer>
-	<p>All rights reserved THE GYM OASIS.</p>
-	<ul class='bottom_nav'>
-		<li class='social_link'></li>
-		<li class='social_link'></li>
-		<li class='social_link'></li>
-		<li class='social_link'></li>
-	</ul>
+---
+const { platform, username } = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<footer slot='footer'>
+	<div class='footer_wrapper'>
+		<ul class='footer_social'>
+			<li class='social_link'>
+				<img src='/facebook.svg' alt='Facebook icon' />
+			</li>
+			<li class='social_link'>
+				<img src='/facebook-messenger.svg' alt='Facebook-messenger icon' />
+			</li>
+			<li class='social_link'>
+				<img src='/instagram.svg' alt='Instagram icon' />
+			</li>
+		</ul>
+		<div class='contact'>
+			<strong>Contact</strong>
+			<a class='contact_link' href='callto:+44506122310'>07506122310</a>
+			<a class='contact_link' href='mailto:contact@theGymOasis.store'
+				>contact@theGymOasis.store</a
+			>
+			<p class='contact_link'>Mon-Fri:9.00-16.00</p>
+		</div>
+	</div>
+	<p class='footer_text'>
+		The seller is THE GYM OSIS based in Watford 73 Sydney Rd WD18 7GA. Company
+		LTD, UTR No.451236547.
+	</p>
+	<p class='footer_text'>
+		Copyrights © 2023.The Gym Oasis.All rights reserved.
+	</p>
 </footer>
+
+<style>
+	.footer {
+		display: flex;
+		align-items: center;
+	}
+	.footer_wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer_social {
+		padding: 0;
+	}
+	.social_link {
+		display: inline-block;
+		list-style: none;
+	}
+	.social_link > img {
+		height: 30px;
+		width: 30px;
+	}
+	.contact {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0.7rem;
+		margin-bottom: 2.5rem;
+		padding-bottom: 2.5rem;
+		border-bottom: 2px solid var(--primary);
+	}
+	.contact > strong {
+		font-size: 1rem;
+	}
+	.contact_link {
+		text-decoration: none;
+		color: var(--primary);
+		font-weight: 500;
+	}
+	.footer_text {
+		font-size: clamp(0.6rem, 3vw, 0.8rem);
+		text-align: center;
+	}
+</style>

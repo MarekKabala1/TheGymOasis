@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 import Nav from '@components/Nav.astro';
+import Footer from '@components/Footer.astro';
 ---
 
 <Layout title='The Gym Oasis'>
@@ -22,23 +23,24 @@ import Nav from '@components/Nav.astro';
 			<Card
 				href='https://docs.astro.build/'
 				title='Trec Nutrition'
-				img='./public/trec-logo.png'
+				img='/trec-logo.png'
 				body='Explore Super new fotmula of prteins and more'
 			/>
 			<Card
 				href='https://astro.build/integrations/'
 				title='Usn Proteins'
-				img='../../public/usn-logo.png'
+				img='/usn-logo.png'
 				body='Supercharger for yours Ability.'
 			/>
 			<Card
 				href='https://astro.build/themes/'
 				title='Vitamins for you'
-				img='./public/vitamins1.png'
+				img='/vitamins1.png'
 				body='Vitamins for everyone!!!Supercharge your immune system!!!'
 			/>
 		</div>
 	</main>
+	<Footer />
 </Layout>
 
 <style>
@@ -87,5 +89,6 @@ import Nav from '@components/Nav.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+		margin-bottom: var(--m-bottom);
 	}
 </style>
