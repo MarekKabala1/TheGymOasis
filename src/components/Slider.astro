@@ -1,0 +1,94 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	img: string;
+}
+const { href, title, img, body } = Astro.props;
+---
+
+<div class='slider_conteiner'>
+	<h3 class='slider_title'>New in store</h3>
+	<ul class='slider-list_conteiner'>
+		<li class='slider_list'>
+			<a href={href}>
+				<img src=`${img}` alt=`${body}` />
+				<strong class='product_title'>
+					{title}
+				</strong>
+				<div class='slider_navigation'>
+					<div class='slider_next'>&#62;</div>
+					<div class='slider_prev'>&#60;</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+	<p class='product_price'>
+		{body}
+	</p>
+</div>
+
+<style>
+	.slider_title {
+		text-transform: uppercase;
+		font-size: clamp(2rem, 7vw, 2.5rem);
+		color: var(--primary);
+	}
+	.slider_conteiner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.slider-list_conteiner {
+		position: relative;
+		padding: 0;
+	}
+	.slider_list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		list-style: none;
+	}
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+	}
+	img {
+		width: 200px;
+		height: 300px;
+	}
+	strong {
+		margin: 0;
+		font-size: clamp(1rem, 6vw, 1.25rem);
+		color: var(--primary);
+	}
+	.slider_next {
+		position: absolute;
+		z-index: 10;
+		font-size: 3rem;
+		top: 40%;
+		right: -10%;
+		font-weight: 500;
+		color: var(--accent);
+	}
+	.slider_prev {
+		position: absolute;
+		z-index: 10;
+		font-size: 3rem;
+		left: -10%;
+		top: 40%;
+		font-weight: 500;
+		color: var(--accent);
+	}
+	.product_price {
+		font-size: clamp(2rem, 7vw, 2.5rem);
+		color: var(--accent);
+		font-weight: 700;
+	}
+</style>
