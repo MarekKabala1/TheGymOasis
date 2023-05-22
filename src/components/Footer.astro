@@ -4,17 +4,17 @@ const { platform, username } = Astro.props;
 
 <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
 
-<footer slot='footer'>
+<footer slot='footer' class='footer'>
 	<div class='footer_wrapper'>
 		<ul class='footer_social'>
 			<li class='social_link'>
-				<img src='/facebook.svg' alt='Facebook icon' />
+				<img src='svg/facebook.svg' alt='Facebook icon' />
 			</li>
 			<li class='social_link'>
-				<img src='/facebook-messenger.svg' alt='Facebook-messenger icon' />
+				<img src='svg/facebook-messenger.svg' alt='Facebook-messenger icon' />
 			</li>
 			<li class='social_link'>
-				<img src='/instagram.svg' alt='Instagram icon' />
+				<img src='svg/instagram.svg' alt='Instagram icon' />
 			</li>
 		</ul>
 		<div class='contact'>
@@ -31,19 +31,27 @@ const { platform, username } = Astro.props;
 		LTD, UTR No.451236547.
 	</p>
 	<p class='footer_text'>
-		Copyrights © 2023.The Gym Oasis.All rights reserved.
+		Copyrights © 2023.The Gym Oasis.</br>All rights reserved.
 	</p>
 </footer>
 
 <style>
 	.footer {
-		display: flex;
-		align-items: center;
+		background-color: var(--neutral-gray);
+		background-image: none;
+		background-size: 400%;
+		border-radius: 0.6rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+			0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
 	}
 	.footer_wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 	}
 	.footer_social {
 		padding: 0;
@@ -62,20 +70,27 @@ const { platform, username } = Astro.props;
 		flex-direction: column;
 		align-items: center;
 		font-size: 0.7rem;
-		margin-bottom: 2.5rem;
-		padding-bottom: 2.5rem;
+		padding-bottom:1.5rem;
+		margin-bottom: 1.5rem;
 		border-bottom: 2px solid var(--primary);
 	}
+
 	.contact > strong {
 		font-size: 1rem;
+		color: var(--primary);
+		padding-bottom: .4rem;
 	}
 	.contact_link {
 		text-decoration: none;
 		color: var(--primary);
-		font-weight: 500;
+		font-weight: 700;
+		margin:0;
+		line-height:1.3rem;
 	}
 	.footer_text {
-		font-size: clamp(0.6rem, 3vw, 0.8rem);
+		font-size: clamp(0.4rem, 2.5vw, 0.8rem);
 		text-align: center;
+		color: var(--primary);
+
 	}
 </style>
