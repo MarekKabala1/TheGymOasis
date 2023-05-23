@@ -35,20 +35,14 @@
 						<p class='product_price'>10 £</p>
 					</div>
 					<div class='img'>
-						<img
-							src='/slider.img/bcaa-capsule.png'
-							alt='BCAA Capsule'
-						/>
+						<img src='/slider.img/bcaa-capsule.png' alt='BCAA Capsule' />
 						<strong class='product_title'>
 							<a href='#'>BCAA Capsule</a>
 						</strong>
 						<p class='product_price'>30 £</p>
 					</div>
 					<div class='img'>
-						<img
-							src='/slider.img/chocoDzam.png'
-							alt='Choco Dzam'
-						/>
+						<img src='/slider.img/chocoDzam.png' alt='Choco Dzam' />
 						<strong class='product_title'>
 							<a href='#'>Choco Dzam</a>
 						</strong>
@@ -110,9 +104,9 @@
 
 <style>
 	.slider_container {
-  width: 100%;
-  overflow: hidden;
-}
+		width: 100%;
+		overflow: hidden;
+	}
 	.slider_title {
 		text-transform: uppercase;
 		font-size: clamp(2rem, 7vw, 2.5rem);
@@ -126,7 +120,7 @@
 	}
 	.slider-list_conteiner {
 		padding: 0;
-		margin:0;
+		margin: 0;
 		overflow: hidden;
 	}
 	.slider_list {
@@ -137,20 +131,21 @@
 		list-style: none;
 	}
 	.slider-wrapper_img {
-  display: flex;
-  transition: transform .5s ease-in-out;
-}
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	}
 	a {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-decoration: none;
-		color:var(--primary)
+		color: var(--primary);
 	}
 	.img {
-		 flex: 0 0 100%;
-		 text-align: center;
+		flex: 0 0 100%;
+		text-align: center;
+		width: 100%;
 	}
 	img {
 		height: auto;
@@ -169,7 +164,7 @@
 		right: 0;
 		font-weight: 500;
 		color: var(--accent);
-		cursor:pointer;
+		cursor: pointer;
 	}
 	.slider_prev {
 		position: absolute;
@@ -179,13 +174,12 @@
 		top: 50%;
 		font-weight: 500;
 		color: var(--accent);
-		cursor:pointer;
+		cursor: pointer;
 	}
 	.product_price {
 		font-size: clamp(2rem, 7vw, 2.5rem);
 		color: var(--accent);
 		font-weight: 700;
-		margin:0;
+		margin: 0;
 	}
-
 </style>
