@@ -25,6 +25,7 @@ import Slider from '@components/Slider.astro';
 			</p>
 		</section>
 
+		<h2 class='section-card_header slider_title'>Our Products</h2>
 		<section role='list' class='section-card_grid'>
 			<Card
 				href='https://docs.astro.build/'
@@ -52,7 +53,7 @@ import Slider from '@components/Slider.astro';
 			/>
 		</section>
 		<section class='section-slider'>
-			<h3 class='slider_title'>New in store</h3>
+			<h2 class='slider_title'>New in store</h2>
 			<Slider />
 		</section>
 	</main>
@@ -132,6 +133,7 @@ import Slider from '@components/Slider.astro';
 		position: relative;
 		overflow: hidden;
 		margin-bottom: var(--m-bottom);
+		max-width: 100%;
 	}
 
 	.slider_title {
