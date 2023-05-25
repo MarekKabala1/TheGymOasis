@@ -4,25 +4,15 @@ import Card from '@components/Card.astro';
 import Nav from '@components/Nav.astro';
 import Footer from '@components/Footer.astro';
 import Slider from '@components/Slider.astro';
+import Hero from '@components/Hero.astro';
+import Article from '@components/Article.astro';
 ---
 
 <Layout title='The Gym Oasis'>
 	<Nav />
 	<main>
 		<section class='hero'>
-			<h1 class='main_header'>
-				Find Your Winning Formula with best<br />
-				<span class='text-gradient'>Suplements and Vitamins</span><br /> just for
-				you.<br />
-				<span class='text-gradient'>Unlock Your True Strength!!!</span>
-			</h1>
-			<p class='main_hero'>
-				Best shop in Watford.
-				<code>Suplements and Vitamins</code>
-				for
-				<code>You and for Your body.</code><br />
-				Come and visit our shop in <strong>73 Sydney Road WD18 7ES</strong>
-			</p>
+			<Hero />
 		</section>
 
 		<h2 class='section-card_header slider_title'>Our Products</h2>
@@ -56,6 +46,9 @@ import Slider from '@components/Slider.astro';
 			<h2 class='slider_title'>New in store</h2>
 			<Slider />
 		</section>
+		<section class='section-article'>
+			<Article />
+		</section>
 	</main>
 	<Footer />
 </Layout>
@@ -64,6 +57,7 @@ import Slider from '@components/Slider.astro';
 	main {
 		margin: 0 auto;
 		max-width: 100ch;
+		padding: 0 1rem;
 	}
 	.hero::after {
 		content: '';
@@ -78,46 +72,7 @@ import Slider from '@components/Slider.astro';
 		left: 0px;
 		opacity: 0.2;
 	}
-	.main_header {
-		font-size: clamp(1.5rem, 4vw, 2.5rem);
-		font-weight: 800;
-		text-align: center;
-		margin-bottom: var(--m-bottom);
-		color: var(--primary);
-		z-index: 1;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.main_hero {
-		line-height: 1.6;
-		z-index: 1;
-		font-size: clamp(0.8rem, 3.5vw, 1.4rem);
-		text-align: center;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: var(--neutral-gray);
-		padding: 1rem;
-		margin-bottom: var(--m-bottom);
-		border-radius: 0.4rem;
-		color: var(--primary);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-			0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
-	.main_hero > code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: var(--accent);
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.main_hero > strong {
-		color: var(--accent);
-	}
+
 	.section-card_grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
@@ -142,5 +97,8 @@ import Slider from '@components/Slider.astro';
 		font-size: clamp(2rem, 7vw, 2.5rem);
 		color: var(--primary);
 		margin: 0 0 2rem 0;
+	}
+	.section-article {
+		margin-bottom: var(--m-bottom);
 	}
 </style>

@@ -4,13 +4,13 @@
 	</div>
 	<ul class='nav_wrapper'>
 		<li class='nav_link'>
-			<a href='about us'>about</a>
-		</li>
-		<li class='nav_link'>
 			<a href='products'>products</a>
 		</li>
 		<li class='nav_link'>
 			<a href='blog'>blog</a>
+		</li>
+		<li class='nav_link'>
+			<a href='about us'>about</a>
 		</li>
 		<li class='nav_link'>
 			<a href='contact'>contact</a>
@@ -30,9 +30,20 @@
 		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
 			0 2px 4px -2px rgba(0, 0, 0, 0.1);
 	}
-	.logo {
+	.logo > h2 {
 		font-size: clamp(0.8rem, 2.5vw, 2rem);
-		color: var(--primary);
+		background-image: linear-gradient(
+			to left,
+			#04c4d9,
+			#1d9fc4,
+			#377ba6,
+			#415881,
+			#3d3959
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
 	}
 	.logo > h2 {
 		text-align: center;
