@@ -1,16 +1,34 @@
-# The Gym Oasis
+# > **The Gym Oasis**
 
 ```
 Web site created with pnpm create astro@latest
 ```
 
-[![Live Version](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={https://the-gym-oasis.vercel.app})
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+![basics](https://the-gym-oasis.vercel.app)
+
+# Simple Website created with **ASTRO**
 
 ## 🚀 Project Structure
 
+### 1. Public Folder
+
+        For all public assets photo, svg etc.
+
+### 2. Components Folder
+
+        For all components used in this project.
+
+### 3. Layout Folder
+
+        For the layouts used in this project.
+
+### 4.Pages Folder
+
+       For all the pages in the website.
+
 ## 🧞 Commands
 
-## 👀 Want to learn more?
+    1. pnpm dev - for running project
+    2. pnpm build - to build the project dist folder
