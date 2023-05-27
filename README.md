@@ -4,7 +4,7 @@
 Web site created with pnpm create astro@latest
 ```
 
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={the-gym-oasis})(https://the-gym-oasis.vercel.app)
+[![Deployed with Vercel](https://img.shields.io/badge/deployed%20with-vercel-black?logo=vercel)](https://the-gym-oasis.vercel.app)
 
 # Simple Website created with **ASTRO**
 
